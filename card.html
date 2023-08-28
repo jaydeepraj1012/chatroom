@@ -1,0 +1,279 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css"
+    integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    body {
+        background-color: #F2F8F9;
+    }
+
+    #info {
+
+        margin: 40px 0px;
+    }
+
+    h1 {
+        color: #3075BA;
+    }
+
+    #Search,
+    #Department,
+    #Designation {
+        outline: none;
+        border: none;
+        border-bottom: 2px solid rgb(23, 23, 23);
+    }
+
+    #formsearch {
+        width: 90%;
+        margin-top: 20px;
+        background-color: white;
+        margin: auto;
+    }
+
+    #submit {
+        color: white;
+        background-color: #28629C;
+        margin-top: 30px;
+    }
+
+    form {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .searchicon {
+        margin-left: 25px;
+        margin-top: 35px;
+        height: 31px;
+        width: 54px;
+    }
+
+    #filtericon {
+        display: flex;
+    }
+
+    #filtericon img {
+        margin-left: 25px;
+        margin-top: 35px;
+        height: 31px;
+        width: 54px;
+
+    }
+
+    #employeelist {
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    td a img {
+        width: 20px;
+    }
+</style>
+
+<div id="info">
+
+    <h1>
+        Employees
+    </h1>
+    <h4>Dashboard/Employees</h4>
+</div>
+<div id="formsearch">
+    <form>
+
+
+        <div class="row" style="display: flex;">
+            <img src="search.png" class="searchicon">
+            <div class="col-sm-3">
+                <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" id="Search" placeholder="Enter Name" name="Search">
+                    <label for="name">Search</label>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" id="Department" placeholder="Enter lname" name="Department">
+                    <label for="lname">Department</label>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" id="Designation" placeholder="Enter email"
+                        name="Designation">
+                    <label for="email">Designation</label>
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <button id="submit" type="submit">Go</button>
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div id="filtericon">
+                <a href="#">
+                    <img src="filter1.png">
+                </a>
+                <a href="#">
+                    <img src="sorticon.png">
+                </a>
+            </div>
+
+        </div>
+    </form>
+</div>
+<div id="popwindow">
+    <img src="icon.png" style="width: 20px; position: absolute; right: 30px;">
+</div>
+<div id="employeelist">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+
+                <th scope="col">Name</th>
+                <th scope="col">Designation</th>
+                <th scope="col">ID</th>
+                <th scope="col">Phone No</th>
+                <th scope="col">Email Address</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+                <td><img src="https://picsum.photos/25/25?random=2" style="border-radius: 50%;">&nbsp;&nbsp;jaydeep</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td><a href="#"><img src="pen-solid.svg"></a>
+                    <a href="#"><img src="delete.png">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+            <tr>
+
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>ui&ux</td>
+                <td>xyz-1</td>
+                <td>9876543210</td>
+                <td>johnsin@gmail</td>
+                <td>icon</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
